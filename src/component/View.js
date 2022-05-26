@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const View = () => {
     var viewlist=[{
@@ -11,6 +12,7 @@ const View = () => {
     }]
   return (
     <div>
+        <Navbar/>
 
         <div className="container">
             <div className="row">
