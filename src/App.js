@@ -5,6 +5,7 @@ import  'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Studentadd from './component/Studentadd';
 import View from './component/View';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import Search from './component/Search';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 
       <Route path="/" exact element={<Studentadd/>}/>
       <Route path="/view" exact element={<View/>}/>
+      <Route path="/search" exact element={<Search/>}/>
 
 
 

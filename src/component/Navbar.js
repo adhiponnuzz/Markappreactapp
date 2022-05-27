@@ -24,6 +24,10 @@ const Navbar = () => {
             <Link to="/view" class="nav-link">View</Link>
           
         </li>
+        <li class="nav-item">
+            <Link to="/search" class="nav-link">Search</Link>
+          
+        </li>
         
       </ul>
     </div>
