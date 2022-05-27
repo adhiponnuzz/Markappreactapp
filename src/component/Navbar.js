@@ -7,7 +7,7 @@ const Navbar = () => {
 
 
 
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
       <Link to="/" class="navbar-brand">MARK</Link>
    
@@ -22,6 +22,10 @@ const Navbar = () => {
         </li>
         <li class="nav-item">
             <Link to="/view" class="nav-link">View</Link>
+          
+        </li>
+        <li class="nav-item">
+            <Link to="/search" class="nav-link">Search</Link>
           
         </li>
         
