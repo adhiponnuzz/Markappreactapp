@@ -3,6 +3,20 @@ import React, { useState } from 'react'
 import Navbar from './Navbar'
 
 const View = () => {
+ const deleteApicall=(id)=>{
+  const data={"_id":id}
+  console.log(data)
+  axios.post("http://localhost:5000/api/delete",data).then((Response)=>{
+            if(Response.data.status=="success")
+            {
+                alert("successfully deleted")
+            }
+            else{
+                alert("error in deletion")
+            }
+        })
+
+ }
    var [viewlist,setviewlist]=useState([])
    var [loadstatus,setloadstatus]=useState(true)
 
@@ -44,7 +58,7 @@ const View = () => {
           <td>{value['name']}</td>
           <td>{value.admno}</td>
           <td>{value.cgpa}</td>
-          <td><button className="btn btn-danger">DELETE</button></td>
+          <td><button onClick={()=>{deleteApicall(value._id)}} className="btn btn-danger">DELETE</button></td>
         </tr>
           
 
