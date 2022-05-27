@@ -28,6 +28,7 @@ const View = () => {
   <thead className="table-success">
     
     <tr>
+      
       <th scope="col">name</th>
       <th scope="col">admno</th>
       <th scope="col">cgpa</th>
@@ -43,6 +44,7 @@ const View = () => {
           <td>{value['name']}</td>
           <td>{value.admno}</td>
           <td>{value.cgpa}</td>
+          <td><button className="btn btn-danger">DELETE</button></td>
         </tr>
           
 
