@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import Navbar from './Navbar'
 
@@ -7,8 +8,25 @@ const Studentadd = () => {
     var [cgpa,setCgpa]=useState("")
 
     const subData=()=>{
-        const data={"Name":name,"Admno":admno,"Cgpa":cgpa}
+        const data={"name":name,"admno":admno,"cgpa":cgpa}
         console.log(data)
+
+        axios.post("http://localhost:5000/api/markadd",data).then((response)=>{
+            console.log(response.data)
+            if(response.data.status=="success")
+            {
+                alert("successfully added")
+
+
+            }
+            else{
+
+                alert("failed to added")
+            }
+
+
+
+        })
 
 
     }
